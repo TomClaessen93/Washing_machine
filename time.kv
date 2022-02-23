@@ -1,0 +1,29 @@
+MDFloatLayout:
+
+    Image:
+        source: 'washingMachinev2.png'
+        size: (1000,1000)
+        size_hint: (None,None)
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+    MDIconButton:
+        pos_hint: {'center_x': .44, 'center_y': .75}
+        on_release: app.show_time_picker()
+        icon: 'btnIconTime.png'
+
+    MDIconButton:
+        size: (200,200)
+        pos_hint: {'center_x': .57, 'center_y': .75}
+        icon: 'btnIconInterval.png'
+        on_release: app.show_duration_picker()
+
+    MDIconButton:
+        pos_hint: {'center_x': .678, 'center_y': .76}
+        icon: 'btnIconStart.png'
+        on_release: app.getOffset()
+
+
+	MDLabel:
+		id: time_label
+		text: "pick a time"
+		pos_hint: {'center_x': .95, 'center_y': .65}
